@@ -32,7 +32,7 @@ pg_dump= PG_DUMP[8:].strip()
 os.putenv('PGPASSWORD', password)
 
 try:
-    con = psycopg2.connect(host='apus', database='postgres',user='postgres', password='masterkey')
+    con = psycopg2.connect(host= host, database= database, user= user, password=password)
     print('Conexao Criada com Sucesso!')
 except: print('Erro ao Conectar no Servidor, verifique as credenciais!')
 
